@@ -2,8 +2,12 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders Problem1 component', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const problemComponent = screen.getByTestId('problem1');
+  expect(problemComponent).toBeInTheDocument();
+  expect(screen.getByRole('combobox', { name: 'Person:' })).toBeInTheDocument();
+  expect(screen.getByRole('combobox', { name: 'Relation:' })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Submit' })).toBeInTheDocument();
+  screen.getByLabelText('Output:')
 });
