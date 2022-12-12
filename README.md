@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The app shows the relationship between the members of a royal family. For ex: Select a Person and relation as `Brothers`, output will list brothers of that selected person.
+
+The data structure to hold the information of every person is in the form of object and
+it is as follow:
+
+Person = {
+    name: string, -->name of person
+    spouse: string,-->name of spouse, Value NA means the person is single.
+    gender: string,-->Male or Female
+    coupleId: number,-->Uniq id to identify child's parent
+    parentId: number,-->Couple id of Parent. value -1 to identify person is outside the family.
+    id: number,-->Uniq id a person
+    children: string[],-->List of children if any.
+}
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
